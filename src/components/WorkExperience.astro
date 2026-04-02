@@ -1,0 +1,69 @@
+---
+const jobs = [
+  {
+    title: "Principal Applied Scientist",
+    company: "Zalando SE (Lounge)",
+    period: "Jan 2026 – Present",
+    bullets: [
+      "Defining the technical roadmap for opportunity cost modeling and the experimentation framework.",
+      "Driving the adoption of opportunity cost as a universal KPI, collaborating with Product Leaders to translate theory into automated decision tools.",
+      "Advising on cross-domain challenges as a member of Zalando's Principal Applied Science community.",
+      "Mentoring Senior Applied Scientists in Econometrics, Forecasting, and Optimization.",
+    ],
+  },
+  {
+    title: "Senior Applied Scientist",
+    company: "Zalando SE (Lounge)",
+    period: "Jul 2023 – Dec 2025",
+    bullets: [
+      "Developed an opportunity cost model from inception to production; currently a core component of the pricing algorithm.",
+      "Provided economic steering for the Pricing Algorithm team and mentored staff on causal methodology.",
+      "Built and maintained the internal Python toolbox for the Economics department.",
+    ],
+  },
+  {
+    title: "Applied Scientist",
+    company: "Zalando SE",
+    period: "Sep 2021 – Jul 2023",
+    bullets: [
+      "Developed a macroeconomic forecasting model used for strategic planning rounds and executive-level outlooks.",
+      "Estimated the effect of cancellations on customers using propensity score matching.",
+    ],
+  },
+  {
+    title: "Researcher (Data Science & Financial Markets)",
+    company: "CPB Netherlands Bureau for Economic Policy Analysis",
+    period: "Jan 2019 – Aug 2021",
+    bullets: [
+      "Spearheaded the adoption of modern methods like Double Machine Learning and multiple-hypothesis correction in policy research.",
+    ],
+  },
+];
+---
+
+<section id="experience" class="py-16 px-4 sm:px-6 bg-slate-900">
+  <div class="max-w-5xl mx-auto">
+    <h2 class="text-2xl font-bold text-white mb-8">Work Experience</h2>
+    <div class="space-y-8">
+      {jobs.map((job) => (
+        <div class="relative pl-4 border-l-2 border-slate-700">
+          <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 mb-2">
+            <div>
+              <h3 class="text-base font-semibold text-white">{job.title}</h3>
+              <p class="text-sky-400 text-sm">{job.company}</p>
+            </div>
+            <span class="text-slate-500 text-xs shrink-0">{job.period}</span>
+          </div>
+          <ul class="space-y-1">
+            {job.bullets.map((bullet) => (
+              <li class="flex gap-2 text-slate-300 text-sm">
+                <span class="text-slate-600 mt-1.5 shrink-0">▸</span>
+                {bullet}
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
